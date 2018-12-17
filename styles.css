@@ -3,43 +3,60 @@ html {
     height: 100%;
 }
 
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
 body {
+    height: 100%;
+    overflow: hidden;
     background: url(images/bg-desktop.svg);
     background-color: hsl(257, 40%, 49%);
     background-size: cover;
     background-repeat: no-repeat;
     overflow: hidden;
-    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    width: 100vw;
+    height: 100vh;
     display: flex;
-    flex-direction: column;
     align-items: center;
+    flex-wrap: wrap;
 }
 
 .main__branding {
-    width: 100px;
-    height: 50px;
+    width: 200px;
+    height: 100px;
     align-self: flex-start;
+    z-index: 10;
 }
 
 .main__branding-image {
     width: 100%;
-    margin: 16px 32px;
+    height: 100%;
+    margin: 20px 32px;
+    z-index: 10;
 }
 
-.test {
+.wrapper {
     display: flex;
-    flex-direction: column;
-    justify-content: center;
-    margin: auto 0;
+    margin: 0 auto;
+    margin: 20px 32px;
+    z-index: 100;
 }
 
 .landing {
     display: flex;
-    margin: 16px 32px;
+    width: 100%;
 }
 
 .landing__section {
-    margin-right: 16px;
+    margin-right: 20px;
+    flex: 1 1 50%;
 }
 
 .landing__image {
@@ -48,12 +65,16 @@ body {
 
 .intro {
     color: white;
-    margin-left: 16px;
-
+    margin-left: 20px;
+    flex: 1 1 40%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .intro__text-header {
-    width: 70%;
+    width: 90%;
+    font-size: 2rem;
 }
 
 .intro__text {
@@ -62,10 +83,34 @@ body {
 }
 
 .intro__text-button {
-    padding: 8px 16px;
+    padding: 8px 20px;
     width: 120px;
     border-radius: 50px;
     border: none;
     color: hsl(257, 40%, 49%);
     box-shadow: 2px 3px 3px rgba(9, 1, 28, 0.4);
+    transition: all 0.2s ease-out;
+}
+
+.intro__text-button:hover {
+    color: white;
+    background: hsl(257, 40%, 49%);
+}
+
+.social-icons {
+    display: flex;
+    color: white;
+    margin: 1rem 2rem;
+    width: 100px;
+    justify-content: space-between;
+    margin-left: auto;
+}
+
+.social-icon {
+    border: 1px solid white;
+    padding: 10px;
+    border-radius: 50%;
+    width: 32px;
+    height: 32px;
+    text-align: center;
 }
