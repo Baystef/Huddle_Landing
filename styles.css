@@ -20,7 +20,6 @@ body {
     position: fixed;
     top: 0;
     left: 0;
-    z-index: -1;
     width: 100vw;
     height: 100vh;
     display: flex;
@@ -32,30 +31,29 @@ body {
     width: 200px;
     height: 100px;
     align-self: flex-start;
-    z-index: 10;
 }
 
 .main__branding-image {
     width: 100%;
     height: 100%;
-    margin: 20px 32px;
+    margin: 16px 32px;
     z-index: 10;
 }
 
 .wrapper {
     display: flex;
-    margin: 0 auto;
-    margin: 20px 32px;
-    z-index: 100;
+    margin: 1.25rem 2rem;
+    align-self: center;
 }
 
 .landing {
     display: flex;
     width: 100%;
+    height: 90%;
 }
 
 .landing__section {
-    margin-right: 20px;
+    margin-right: 1.25rem;
     flex: 1 1 50%;
 }
 
@@ -65,26 +63,29 @@ body {
 
 .intro {
     color: white;
-    margin-left: 20px;
-    flex: 1 1 40%;
+    margin-left: 1.25rem;
+    flex: 1 2 40%;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: baseline;
 }
 
 .intro__text-header {
     width: 90%;
-    font-size: 2rem;
+    font-size: 2.5rem;
 }
 
 .intro__text {
-    font-size: 0.8rem;
+    font-size: 1rem;
     line-height: 1.5;
+    width: 100%;
+    margin-top: -2rem;
+    word-wrap: break-word;
 }
 
 .intro__text-button {
-    padding: 8px 20px;
-    width: 120px;
+    padding: 0.5rem 1.25rem;
+    width: 7.5rem;
     border-radius: 50px;
     border: none;
     color: hsl(257, 40%, 49%);
@@ -101,16 +102,61 @@ body {
     display: flex;
     color: white;
     margin: 1rem 2rem;
-    width: 100px;
+    width: 7.5rem;
     justify-content: space-between;
     margin-left: auto;
+    padding-bottom: 1.5rem;
 }
 
-.social-icon {
+.fab {
     border: 1px solid white;
-    padding: 10px;
+    padding: 7px;
     border-radius: 50%;
-    width: 32px;
-    height: 32px;
+    width: 2rem;
+    height: 2rem;
+    vertical-align: middle;
     text-align: center;
+}
+
+
+/*Mobile Styles*/
+@media (max-width: 23.44rem) {
+    body {
+        flex-direction: column;
+        align-items: center;
+        background-size: cover;
+        text-align: center;
+    }
+
+    .main__branding {
+        margin-top: -1rem;
+        width: 40%;
+    }
+
+    .landing {
+        flex-direction: column;
+    }
+
+    .landing__section {
+        margin: 0;
+    }
+
+    .intro {
+        align-items: center;
+        margin: 0;
+    }
+
+    .intro__text-header {
+        font-size: 1.8rem;
+        padding-bottom: 0.8rem;
+        width: 100%;
+    }
+
+    .intro__text-button {
+        width: 12rem;
+    }
+
+    .social-icons {
+        margin: auto 0;
+    }
 }
