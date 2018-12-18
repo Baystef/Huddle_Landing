@@ -15,13 +15,11 @@ html {
 body {
     height: 100%;
     font-family: 'Poppins', sans-serif;
-    overflow: hidden;
+    overflow-x: hidden;
     background: url(images/bg-desktop.svg);
     background-color: hsl(257, 40%, 49%);
     background-size: cover;
     background-repeat: no-repeat;
-    overflow: hidden;
-    position: fixed;
     top: 0;
     left: 0;
     width: 100vw;
@@ -97,7 +95,7 @@ body {
 
 .intro__text-button:hover {
     color: white;
-    background: hsl(257, 40%, 49%);
+    background: #ed52cc;
 }
 
 .social-icons {
@@ -126,13 +124,16 @@ body {
     body {
         flex-direction: column;
         align-items: center;
-        background-size: cover;
+        background-size: contain;
         text-align: center;
+        overflow-x: hidden;
+        overflow-y: auto;
     }
 
     .main__branding {
-        margin-top: -1rem;
-        width: 40%;
+        margin-top: -1.5rem;
+        margin-bottom: -1rem;
+        width: 30%;
     }
 
     .landing {
@@ -161,6 +162,7 @@ body {
 
     .intro__text-button {
         width: 12rem;
+        margin-bottom: -2rem;
     }
 
     .social-icons {
